@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+      <link rel="shortcut icon" href="./chat-favicon.png" type="image/png" />
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
@@ -10,13 +17,13 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <title>ChatCord App</title>
+    <title>JustChat App</title>
   </head>
   <body>
     <div class="chat-container">
       <header class="chat-header">
-        <h1><i class="fas fa-smile"></i> ChatCord</h1>
-        <a href="index.html" class="btn">Leave Room</a>
+        <h1><i class="fas fa-comment-dots"></i> JustChat</h1>
+        <a  class="btn" id="leave-btn"><i class="fas fa-sign-out-alt" style="margin-right: 3px;"></i>Leave Room</a>
       </header>
       <main class="chat-main">
         <div class="chat-sidebar">
@@ -32,11 +39,11 @@
           <input
             id="msg"
             type="text"
-            placeholder="Enter Message"
+            placeholder="Type message here..."
             required
             autocomplete="off"
           />
-          <button class="btn"><i class="fas fa-paper-plane"></i> Send</button>
+          <button class="btn">Send<i style="margin-left:5px" class="fas fa-paper-plane"></i> </button>
         </form>
       </div>
     </div>
