@@ -97,6 +97,7 @@ a {
   padding: 30px;
   max-height: 500px;
   overflow-y: scroll;
+  min-height: 70vh;
 }
 
 .chat-messages .message {
@@ -126,6 +127,7 @@ a {
 
 .chat-form-container form {
   display: flex;
+  justify-content: center;
 }
 
 .chat-form-container input[type="text"] {
@@ -200,9 +202,11 @@ a {
   color: black;
   font-family: "Sriracha", cursive;
 }
-#users{
-	font-size: 1.4rem;
+#users {
+  font-size: 1.4rem;
 }
+
+/* For mobile devices */
 
 @media (max-width: 700px) {
   .chat-main {
@@ -211,5 +215,17 @@ a {
 
   .chat-sidebar {
     display: none;
+  }
+
+  .chat-messages {
+    min-height: 70vh;
+  }
+
+  #send-btn {
+    min-width: 95px;
+  }
+
+  #leave-btn {
+    max-width: 28vw;
   }
 }
