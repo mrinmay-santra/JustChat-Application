@@ -20,7 +20,7 @@ socket.on("roomUsers", ({ room, users }) => {
 });
 
 // Message from server
-socket.on("message", (message) => {
+socket.on('message', (message) => {
   console.log(message);
   outputMessage(message);
 
@@ -29,7 +29,7 @@ socket.on("message", (message) => {
 });
 
 // Message submit
-chatForm.addEventListener("submit", (e) => {
+chatForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
   // Get message text
@@ -72,19 +72,19 @@ function outputRoomName(room) {
 
 // Add users to DOM
 function outputUsers(users) {
-  userList.innerHTML = "";
+  userList.innerHTML = '';
   users.forEach((user) => {
-    const li = document.createElement("li");
+    const li = document.createElement('li');
     li.innerText = user.username;
     userList.appendChild(li);
   });
 }
 
-document.getElementById("leave-btn").addEventListener("click", () => {
-  const leaveRoom = confirm("Are you sure you want to leave the chatroom??");
+//Prompt the user before leave chat room
+document.getElementById('leave-btn').addEventListener('click', () => {
+  const leaveRoom = confirm('Are you sure you want to leave the chatroom?');
   if (leaveRoom) {
-    window.location = "../index.html";
+    window.location = '../index.html';
   } else {
-    // window.location="../chat.html"
   }
 });
